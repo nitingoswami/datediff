@@ -80,13 +80,13 @@
 	}).on('changeDate',function(e){
 		
 		if(e.target.classList.contains('start-date-cal')){
-			$('input[name=start_year]').val(e.format().split('-')[2]);
+			$('input[name=start_year]').val(e.format().split('-')[0]);
 			$('input[name=start_month]').val(e.format().split('-')[1]);
-			$('input[name=start_day]').val(e.format().split('-')[0]);
+			$('input[name=start_day]').val(e.format().split('-')[2]);
 		}else{
-			$('input[name=end_year]').val(e.format().split('-')[2]);
+			$('input[name=end_year]').val(e.format().split('-')[0]);
 			$('input[name=end_month]').val(e.format().split('-')[1]);
-			$('input[name=end_day]').val(e.format().split('-')[0]);
+			$('input[name=end_day]').val(e.format().split('-')[2]);
 		}
 		
 	});
